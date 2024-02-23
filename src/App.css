@@ -1,0 +1,100 @@
+/* Genel Stiller */
+/* styles.css */
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    width: 200px; /* Sabit geniþlik */
+    box-sizing: border-box;
+    background-color: #d3e0dc;
+    overflow: hidden; /* Metni sýðdýrmak için */
+}
+
+    .menu-item img {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+
+.item-details {
+    padding: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.item-p {
+    max-height: 50px; /* Maksimum yükseklik */
+    overflow: hidden;
+}
+
+button {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.menu-item:hover {
+    background-color: #c1d5d2;
+}
+
+/* Modal Stilleri */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Arka plana hafif bir opaklýk ekler */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    overflow-y: auto;
+  
+}
+
+    .modal-content button {
+        background-color: #ff8c00;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+/* Ýsteðe baðlý: Hover efekti ekleyebilirsiniz */
+.menu-item:hover {
+    background-color: #c1d5d2;
+}
+
+/* Baþlýk ve Menü Uygulama Stilleri */
+.menu-app {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+h1 {
+text-align: center;
+}
