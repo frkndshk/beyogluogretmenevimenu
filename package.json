@@ -3,12 +3,7 @@
   "name": "my-react-app",
   "version": "0.1.0",
   "private": true,
-
-  "babel": {
-    "presets": [ "@babel/preset-env", "@babel/preset-react" ],
-    "plugins": [ "@babel/plugin-proposal-private-property-in-object" ]
-  },
-
+  
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
