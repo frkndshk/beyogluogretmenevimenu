@@ -10,7 +10,7 @@ const Mainscreen = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://beyogluogretmenevimenus-d65649fd1a23.herokuapp.com/api/menuler');
+                const response = await fetch('https://server-ymyl.onrender.com/api/menuler');
                 const data = await response.json();
                 console.log(data)
                 // Assuming the response is an array of menu items
