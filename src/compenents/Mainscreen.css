@@ -3,7 +3,7 @@
 
 .mainscreen-container {
     display: flex;
-    flex-direction: column; /* Butonları dikey olarak sıralamak için */
+    flex-direction: column; /* ButonlarÃ½ dikey olarak sÃ½ralamak iÃ§in */
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -11,19 +11,20 @@
 }
 
 .button-grid {
-    display: flex; /* Butonları yatay olarak sıralamak için */
-    flex-wrap: wrap; /* Eğer sığmazlarsa bir alt satıra geçmeleri için */
-    justify-content: center; /* Butonları ortalamak için */
+    display: flex; /* ButonlarÃ½ yatay olarak sÃ½ralamak iÃ§in */
+    flex-wrap: wrap; /* EÃ°er sÃ½Ã°mazlarsa bir alt satÃ½ra geÃ§meleri iÃ§in */
+    justify-content: center; /* ButonlarÃ½ ortalamak iÃ§in */
     gap: 10px;
 }
 
 .button {
     width: 100%;
-    max-width: 150px; /* İstediğiniz genişliği ayarlayabilirsiniz */
+    max-width: 150px; /* ÃstediÃ°iniz geniÃ¾liÃ°i ayarlayabilirsiniz */
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
     border: 1px solid #ccc;
+    
 }
 
     .button.selected {
@@ -58,6 +59,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
     .button:hover {
