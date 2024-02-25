@@ -1,9 +1,6 @@
-/* Mainscreen.css */
-/* Mainscreen.css */
-
 .mainscreen-container {
     display: flex;
-    flex-direction: column; /* Butonlarý dikey olarak sýralamak için */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -11,53 +8,23 @@
 }
 
 .button-grid {
-    display: flex; /* Butonlarý yatay olarak sýralamak için */
-    flex-wrap: wrap; /* Eðer sýðmazlarsa bir alt satýra geçmeleri için */
-    justify-content: center; /* Butonlarý ortalamak için */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
 .button {
-    width: 100%;
-    max-width: 150px; /* Ýstediðiniz geniþliði ayarlayabilirsiniz */
+    width: 150px;
+    height: 150px;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
     border: 1px solid #ccc;
-    
-}
-
-    .button.selected {
-        background-color: lightblue;
-    }
-
-.visible {
-    display: flex;
-}
-
-.hidden {
-    display: none;
-}
-
-.go-back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-}
-
-
-
-.button {
     background-color: #2ecc71;
     color: #fff;
-    padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -66,9 +33,9 @@
         background-color: #27ae60;
     }
 
-.selected {
-    background-color: #e74c3c;
-}
+    .button.selected {
+        background-color: #e74c3c;
+    }
 
 .visible {
     opacity: 1;
@@ -79,29 +46,6 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-}
-/* Mainscreen.css */
-
-
-
-.button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-}
-
-    .button.selected {
-        background-color: lightblue;
-    }
-
-.visible {
-    display: grid;
-}
-
-.hidden {
-    display: none;
 }
 
 .go-back-button {
