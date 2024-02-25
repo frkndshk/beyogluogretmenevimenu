@@ -64,7 +64,7 @@ const Mainscreen = () => {
         <div className="mainscreen-container">
             {selectedOption !== '.' && (
                 <button className="go-back-button" onClick={handleGoBack}>
-                    Go Back
+                    <span>&#8592;</span>
                 </button>
             )}
 
