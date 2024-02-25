@@ -12,7 +12,7 @@ const Mainscreen = () => {
             try {
                 const response = await fetch('https://server-ymyl.onrender.com/api/menuler');
                 const data = await response.json();
-                console.log(data)
+                console.log(data);
                 // Assuming the response is an array of menu items
                 setMenuData(data);
             } catch (error) {
@@ -28,7 +28,7 @@ const Mainscreen = () => {
         const selectedMenuItem = menuData.find((item) => item.ad === selectedOption);
 
         if (selectedMenuItem) {
-            return <MenuApp name={  selectedMenuItem.ad} content={selectedMenuItem.icerik} />;
+            return <MenuApp name={selectedMenuItem.ad} content={selectedMenuItem.icerik} />;
         }
 
         return null;
@@ -40,11 +40,23 @@ const Mainscreen = () => {
     };
 
     const handleGoBack = () => {
-        setSelectedOption('.');
-        setButtonsVisible(true);
+        // Kullanıcının seçtiği menüyü sıfırla veya, eğer hiç seçim yapılmamışsa, uygulamayı kapat
+        if (selectedOption !== '.') {
+            setSelectedOption('.');
+            setButtonsVisible(true);
+        } else {
+            // Eğer hiçbir menü seçimi yapılmamışsa, uygulamadan çık
+            if (window.history.length > 1) {
+                window.history.goBack();
+            } else {
+                // Eğer geri gidilecek bir sayfa yoksa, uygulamayı kapat
+                window.close();
+            }
+        }
     };
+
     const handleClick = () => {
-        // Yeni bir pencerede veya sekmede a�mak i�in '_blank' �zelli�i ekleyebilirsiniz
+        // Yeni bir pencerede veya sekmede açmak için '_blank' özelliği ekleyebilirsiniz
         window.open('https://docs.google.com/forms/d/e/1FAIpQLScLeyd3cFOOCkfZDgG-GMOO_pSEh22Q4qW9TIUdp38xly0H5g/viewform', '_blank');
     };
 
@@ -67,7 +79,6 @@ const Mainscreen = () => {
                     </div>
                 ))}
                 <button onClick={handleClick}>memnuniyet anketimiz</button>
-
             </div>
 
             {renderContent()}
